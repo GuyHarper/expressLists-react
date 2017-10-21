@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const lists = require('../controllers/lists');
 const auth = require('../controllers/auth');
+const secureRoute = require('../lib/secureRoute');
 
 module.exports = router;
 
@@ -32,10 +33,10 @@ router.route('/lists/:id/entries/:entryId/comments/:commentId')
   .delete(lists.commentsDelete); // ok
 
 router.route('/register')
-  .post(auth.register);
+  .post(auth.register); // ok
 
 router.route('/login')
-  .post(auth.login);
+  .post(auth.login); // ok
 
 // router.all('/*', (req, res) => res.notFound());
 

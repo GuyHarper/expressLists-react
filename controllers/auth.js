@@ -18,7 +18,7 @@ function login(req, res) {
       if(!user || !user.validatePassword(req.body.password)) return res.unauthorized();
 
       const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1h' });
-      return res.json({ message: `Welcome back ${user.username}`, token });
+      return res.json({ message: `Welcome back ${user.firstname}`, token });
     })
     .catch(() => res.status(500).json({ message: 'Something went wrong'}));
 }
