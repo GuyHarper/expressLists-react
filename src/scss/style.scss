@@ -1,2 +1,247 @@
 @import './bootstrap/bootstrap.scss';
 @import './_custom-variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+body {
+  font-family: $font-family-base;
+}
+
+h1 {
+  margin-top: 50px;
+  &.homepage {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 100px;
+  }
+}
+
+.navbar {
+  border-bottom: 6px double $gray-600;
+  color: $gray-100;
+  .navbar-brand {
+    font-size: $navbar-brand-font-size;
+    a {
+      color: $gray-600;
+      &:hover {
+        color: darken($gray-600, 15%);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+ul.inactive {
+  margin-top: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+input.input {
+      border: none;
+      box-shadow: none;
+      padding-bottom: 5px;
+      &.inactive {
+        color: $gray-300;
+        text-decoration: line-through;
+      }
+      &.comment-input {
+        margin-top: 5px;
+        margin-left: 15px;
+        font-size: $font-size-sm;
+        margin-bottom: 1rem;
+        @extend .login;
+      }
+      &::placeholder {
+        color: $gray-300;
+      }
+      &.login {
+        padding-bottom: 0;
+        border-bottom: 1px solid $gray-300;
+        border-radius: 0;
+      }
+      &.modal-input {
+        @extend .login;
+      }
+}
+
+.control{
+  &.login {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  &.register {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+button.btn {
+  display: flex;
+  flex-direction: col;
+  justify-content: center;
+  margin-left: .5rem;
+  border: none;
+  color: $gray-500;
+  padding: .625em;
+  &.login {
+    margin-left: 0;
+  }
+  &.add-entry-button {
+    padding: 1.5em 1em;
+  }
+  &.comment-button {
+    padding: 2px;
+    margin-left: 3px;
+  }
+  &.comment-delete-button {
+    padding: 3px;
+  }
+  &.hidden {
+    display: none;
+  }
+  &:hover {
+    color: $gray-600;
+  }
+  &:active {
+    border: none;
+    box-shadow: none;
+    color: $gray-700;
+  }
+}
+
+.card {
+  margin-bottom: 0.25rem;
+  &.inactive {
+    height: 30px;
+    color: $gray-300;
+    box-shadow: none;
+  }
+  .col {
+    padding-bottom: 0.75rem;
+  }
+}
+
+.hidden {
+  display: none;
+  &.comment-form {
+    display: none;
+  }
+}
+
+.col {
+  padding: .5rem;
+}
+
+.col.justify-content-center {
+  display: flex;
+  flex-direction: col;
+  justify-content: center;
+}
+
+.field:not(:last-child) {
+  margin: 0;
+}
+
+.row.is-gapless:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.checkbox-div {
+  min-width: 25px;
+  display: flex;
+  flex-direction: col;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.comment-container {
+  padding-top: 0;
+}
+
+.col.comment-delete-container {
+  padding: 0;
+  }
+
+.row.delete-share-container .col {
+  padding-left: 17px;
+  padding-right: 0;
+}
+
+.row.delete-share-container .col .button {
+  padding: 5px;
+}
+
+.comment-input {
+  padding-bottom: 0;
+}
+
+.fa-plus-square {
+  font-size: 1rem;
+}
+
+.fa-times {
+  font-size: 0.9rem;
+}
+
+.fa-list {
+  margin-top: 2.1rem;
+  margin-left: 0.2rem;
+  font-size: 1rem;
+}
+
+.fa-check-square-o.inactive:hover {
+  color: $gray-500;
+}
+
+.is-small {
+  font-size: $font-size-sm;
+}
+
+.col.comment-area {
+  max-width: 70%;
+  padding: 5px;
+}
+
+.row.comment-area-container {
+  margin-bottom: 0;
+  margin-left: 8px;
+  &:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.centered {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.centered div {
+  margin-top: 30px;
+}
+
+.btn.modal-close-button {
+  padding: 5px;
+}
+
+.col.modal-close-button-container {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row.share-cancel-container {
+  margin-top: 30px;
+}
+
+.btn.cancel-button {
+  color: $gray-300;
+}
+
+#share-list-form {
+  margin-left: 15px;
+  margin-right: 20px;
+}

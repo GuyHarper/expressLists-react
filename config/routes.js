@@ -20,7 +20,7 @@ router.route('/lists/:id')
 //   .put(lists.share);
 
 router.route('/lists/:id/entries')
-  .put(lists.entriesCreate); // ok
+  .post(lists.entriesCreate); // ok
 
 router.route('/lists/:id/entries/:entryId')
   .delete(lists.entriesDelete) // ok

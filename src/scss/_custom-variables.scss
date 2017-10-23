@@ -1,0 +1,17 @@
+$theme-colors: (
+  primary: $gray-600,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+);
+
+$font-family-sans-serif: 'Oxygen', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$navbar-brand-font-size: $font-size-base;
+
+$font-size-sm: .75rem;
