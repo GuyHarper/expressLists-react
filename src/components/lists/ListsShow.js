@@ -33,6 +33,7 @@ class ListsShow extends React.Component {
     Axios
       .post(`/api/lists/${this.state.list.id}/entries`, this.state.newEntry)
       .then(this.componentWillMount)
+      .then(() => this.setState({ newEntry: { text: '' }}))
       .catch(err => console.log(err));
   }
 
@@ -97,7 +98,7 @@ class ListsShow extends React.Component {
               <form onSubmit={this.newEntry} className="row">
                 <div className="form-group col">
                   <label htmlFor="new-entry" hidden>Entry</label>
-                  <input onChange={this.handleChange} type="text" name="text" id="new-entry" autoComplete="off" className="form-control" placeholder="Add entry" autoFocus/>
+                  <input onChange={this.handleChange} value={this.state.newEntry.text} type="text" name="text" id="new-entry" autoComplete="off" className="form-control" placeholder="Add entry" autoFocus/>
                 </div>
                 <div className="col col-auto justify-content-center">
                   <button className="button add-entry-button hidden"><i className="fa fa-plus" aria-hidden="true"></i></button>
